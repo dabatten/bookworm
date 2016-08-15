@@ -1,3 +1,9 @@
-{{#each books as |book|}}
-<li>{{book.title}}<small> by {{book.author}}</small> -- {{book.description}}</li>
-{{/each}}
+<div class="ui list">
+    {{#each books as |book|}}
+    <li class="item"><a>{{book.title}}</a><small> by <a>{{book.author}}</a></small></li>
+    {{/each}}
+</div>
+
+<script>
+    $("#bookNav").addClass("active");
+</script>
