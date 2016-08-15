@@ -1,0 +1,9 @@
+<div class="ui list">
+    {{#each authors as |author|}}
+    <li class="item"><a href="/authors/{{author._id}}">{{author.name}}</a></li>
+    {{/each}}
+</div>
+
+<script>
+    $("#authorNav").addClass("active");
+</script>

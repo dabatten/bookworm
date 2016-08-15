@@ -1,0 +1,9 @@
+<div class="ui list">
+    {{#each books as |book|}}
+    <li class="item"><a href="/books/{{book._id}}">{{book.title}}</a><small> by <a href="../authors/{{book.author._id}}">{{book.author.name}}</a></small></li>
+    {{/each}}
+</div>
+
+<script>
+    $("#bookNav").addClass("active");
+</script>

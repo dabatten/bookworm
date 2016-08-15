@@ -7,6 +7,7 @@ var bodyParser = require('body-parser');
 
 //MongoDB Model Setup
 var mongoose = require('mongoose');
+require('./models/Authors');
 require('./models/Books');
 mongoose.connect('mongodb://localhost/bookworm');
 
