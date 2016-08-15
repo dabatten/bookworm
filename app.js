@@ -5,15 +5,17 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
+//MongoDB Model Setup
+var mongoose = require('mongoose');
+require('./models/Books');
+mongoose.connect('mongodb://localhost/bookworm');
+
 var routes = require('./routes/index');
 var users = require('./routes/users');
 
 var app = express();
 
-//MongoDB Model Setup
-var mongoose = require('mongoose');
-require('./models/Books');
-mongoose.connect('mongodb://localhost/bookworm');
+
 
 
 // view engine setup
