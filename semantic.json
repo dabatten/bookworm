@@ -1,5 +1,5 @@
 {
-  "base": "semantic/",
+  "base": "public/lib/semantic/",
   "paths": {
     "source": {
       "config": "src/theme.config",
