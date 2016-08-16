@@ -1,3 +1,12 @@
 <h2>{{author.name}}</h2>
-<h4>Born : {{author.born}}-- Died: {{author.died}}</h4>
+<h4>Born : {{dateFormat author.born "LL"}}</h4>
+<h4>Died : {{dateFormat author.died "LL"}}</h4>
+<a class="ui icon button" href="{{author.wikiLink}}"><i class="wikipedia icon"></i></a>
+<h5 class="ui block header">Biography</h5>
 <p>{{author.biography}}</p>
+<h5 class="ui block header">Works</h5>
+<div class="ui list">
+    {{#each author.books as |book|}}
+    <li><a href="/books/{{book._id}}">{{book.title}}</a></li>
+    {{/each}}
+</div>

@@ -62,9 +62,15 @@ router.get('/authors', function (req, res, next) {
 });
 
 router.get('/authors/:author', function (req, res, next) {
-    res.render('authors/author', {
-        author: req.author
-    });
+    req.author.populate('books', function (err, author) {
+        if (err) {
+            return next(err);
+        }
+        res.render('authors/author', {
+            author: author
+        });
+    })
+
 });
 
 router.get('/books', function (req, res, next) {

@@ -10,10 +10,20 @@
 </head>
 
 <body>
-    <div class="ui menu">
-        <a class="header item" href="/">Bookworm</a>
-        <a id="bookNav" class="item" href="/books"><i class="book icon"></i>Books</a>
-        <a id="authorNav" class="item" href="/authors"><i class="user icon"></i>Authors</a>
+    <div class="ui menu borderless">
+        <div class="ui container">
+            <a class="header item" href="/">Bookworm</a>
+            <a id="bookNav" class="item" href="/books"><i class="book icon"></i>Books</a>
+            <a id="authorNav" class="item" href="/authors"><i class="user icon"></i>Authors</a>
+        </div>
+        <div class="right menu">
+            <div class="item">
+                <a class="ui button">Log in</a>
+            </div>
+            <div class="item">
+                <a class="ui primary button">Sign Up</a>
+            </div>
+        </div>
     </div>
     <div class="ui container">
         {{{body}}}

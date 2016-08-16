@@ -6,7 +6,8 @@ var BookSchema = new mongoose.Schema({
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Author'
     },
-    description: String
+    description: String,
+    publishDate : Date
 });
 
 mongoose.model('Book', BookSchema);
